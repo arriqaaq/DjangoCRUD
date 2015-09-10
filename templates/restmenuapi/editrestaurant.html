@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' />
+	<link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Neuton:400,800' rel='stylesheet' type='text/css'>
+	<style>
+		h3{font-family: 'Dancing Script', cursive;
+		   font-size: 300%;}
+		#test {
+		display: flex;
+		flex-wrap: wrap;
+		}
+		
+	</style>
+</head>
+<body>
+	<div  class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-center">Edit Menu Item</h3>
+				<form action="/restmenuapi/edit_restaurant/{{i.id}}/" method='POST'>
+					{% csrf_token %}
+					<p>Name:</p>
+						
+						<input type='text' size='30' name='name'>
+						<input type='submit' value='Edit'>
+				<a href="/restmenuapi/">Cancel</a>
+				</form>					
+			</div>
+		</div>
+		<hr/>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<address class="text-right">
+					<strong>Twitter, Inc.</strong><br>
+					795 Folsom Ave, Suite 600<br>
+					San Francisco, CA 94107<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+				</address>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

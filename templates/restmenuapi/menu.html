@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' />
+	<link href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Neuton:400,800' rel='stylesheet' type='text/css'>
+	<style>
+		h3{font-family: 'Dancing Script', cursive;
+		   font-size: 300%;}
+		#test {
+		display: flex;
+		flex-wrap: wrap;
+		}
+		
+	</style>
+</head>
+<body>
+	<div  class="container-fluid">
+		<div id='test' class="row">
+			<div class="col-md-2">
+				<img  class="img-rounded" height="150" width="250" alt="Product Details" src="http://usimages.detik.com/content/2014/08/05/1345/094027_anak5.jpg">
+			</div>
+			<div class="col-md-2">
+				<img  class="img-rounded" height="150" width="250" alt="Product Details" src="http://cdn.zmescience.com/wp-content/uploads/2015/06/fap-09.jpg">
+			</div>
+			<div class="col-md-2">	
+				<img  class="img-rounded" height="150" width="250" alt="Product Details" src="http://seattle.eat24hours.com/files/cuisines/v4/thai.jpg">
+			</div>
+			<div class="col-md-2">
+				<img  class="img-rounded" height="150" width="250" alt="Product Details" src="http://www.seattleorganicrestaurants.com/vegan-whole-foods/images/Food-Guidelines.jpg">
+			</div>
+			<div class="col-md-2">	
+				<img  class="img-rounded" height="150" width="250" alt="Product Details" src="http://seattle.eat24hours.com/files/cuisines/v4/thai.jpg">
+			</div>
+			<div class="col-md-1">	
+				<img  class="img-rounded" height="150" width="200" alt="Product Details" src="http://seattle.eat24hours.com/files/cuisines/v4/thai.jpg">
+			</div>
+			&nbsp;&nbsp;&nbsp;
+			
+		</div>
+		<hr/>
+		<h3>{{restaurant.name}}</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<a href = '/restmenuapi/add_menu/{{restaurant.id}}/'>Create New Menu</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+					<h3 class="text-center">
+					A la carte:</h3>
+					{%for i in items%}
+					{{i.name}}
+					</br>
+					{{i.description}}
+					</br>
+					{{i.price}}
+					</br>
+					<a href="/restmenuapi/edit_menu/{{i.id}}/">Edit</a>
+					</br>
+					<a href="">Delete</a>
+					</br>
+					<hr/>
+					{%endfor%}
+			</div>
+		</div>
+		<hr/>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<address class="text-right">
+					<strong>Twitter, Inc.</strong><br>
+					795 Folsom Ave, Suite 600<br>
+					San Francisco, CA 94107<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+				</address>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
